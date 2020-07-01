@@ -1,5 +1,2 @@
 # Flutter-Design
-Design of an application developed in flutter. (being updated)
-<br>
-<img src="https://github.com/lorenzopalazzesi/Flutter-Design/blob/master/flutter_design/Screenshot/LoginPage.png" width="250">
-<img src="https://github.com/lorenzopalazzesi/Flutter-Design/blob/master/flutter_design/Screenshot/HomePage.png" width="250">
+Flutter implementation of the design https://www.behance.net/gallery/98608435/Song-Chimp-Music-App-%28Freebie%29

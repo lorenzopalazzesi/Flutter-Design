@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_design/Animation/FadeAnimation.dart';
+import 'package:flutter_design/Screen/HomePage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatelessWidget {
@@ -12,9 +14,9 @@ class LoginPage extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             colors: [
-              Colors.orange[800],
-              Colors.orange[600],
-              Colors.orange[400]
+              Colors.blue[800],
+              Colors.blue[600],
+              Colors.blue[400]
             ]
           ),
         ),
@@ -27,15 +29,15 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Login", style: TextStyle(color: Colors.white, fontSize: 40),),
+                  FadeAnimation(1.2, Text("Hello There!", style: TextStyle(color: Colors.white, fontSize: 40 , fontWeight: FontWeight.w800),),),
                   SizedBox(height: 10,),
-                  Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 18),)
+                  FadeAnimation(1.4,Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 20),),),
                 ],
               ),
             ),
             SizedBox(height: 20,),
             Expanded(
-              child: Container(
+              child: FadeAnimation(1.6 , Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(70)),
@@ -51,7 +53,7 @@ class LoginPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
                           boxShadow: [BoxShadow(
-                            color: Colors.orange[100],
+                            color: Colors.blue[100],
                             blurRadius: 20,
                             offset: Offset(0, 10)
                           )],
@@ -94,14 +96,18 @@ class LoginPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(50),
                           gradient: LinearGradient(
                             colors: [
-                              Colors.orange[800],
-                              Colors.orange[600],
-                              Colors.orange[400],
+                              Colors.blue[800],
+                              Colors.blue[600],
+                              Colors.blue[400],
                               ],
                           ),
                         ),
                         child: Center(
-                          child: Text("Login", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),),
+                            child: new GestureDetector(
+                              onTap: (){Navigator.push( context,MaterialPageRoute(builder: (context) => HomePage()),);},
+                            child: Text("Login", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),)
+                            ),
+                              
                         )
                       ),
                       SizedBox(height: 30,),
@@ -143,7 +149,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
+              ),),
             )
           ],
         ),

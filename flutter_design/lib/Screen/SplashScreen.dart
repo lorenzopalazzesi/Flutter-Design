@@ -19,7 +19,7 @@ class SplashScreenState extends State<SplashScreen> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => InfoScreen_1(),
+            builder: (context) => InfoScreen1(),
           ));
     });
   }

@@ -24,22 +24,26 @@ class InfoScreen2 extends StatelessWidget{
             SizedBox(height: 10,),
             FadeAnimation(1.6 , Text("Download Unlimited  song anytime for free", style: TextStyle(color: Colors.grey, fontSize: 16),),),
             SizedBox(height: 30,),
-            FadeAnimation(1.8, Image.asset('assets/images/phone_2.png'),),
+            Expanded(
+                          child: FadeAnimation(1.8, Image.asset('assets/images/phone_2.png'),
+                ),
+            ),
             FadeAnimation(2.0,Divider(color: Color(0xffFE2851), height: 2, thickness: 3,),),
             SizedBox(height: 40,),
             new GestureDetector(
-              onTap: (){print("Skip");},
-              child: FadeAnimation(2.2,Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Center(
-                    child: Text("Skip for Now", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),),
-                  ),
-                ),),
-            ),
+                      onTap: (){print("Skip");},
+                      child: FadeAnimation(2.2,Container(
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Center(
+                              child: Text("Skip for Now", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600),),
+                            ),
+                        ),
+                    ),
+                ),
             SizedBox(height: 10,),
             new GestureDetector(
               onTap: (){Navigator.push(context,

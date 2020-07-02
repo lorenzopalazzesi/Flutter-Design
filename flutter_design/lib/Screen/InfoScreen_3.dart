@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_design/Animation/FadeAnimation.dart';
+import 'package:flutter_design/Screen/LoginPage.dart';
 
 class InfoScreen3 extends StatelessWidget{
   @override
@@ -23,11 +24,15 @@ class InfoScreen3 extends StatelessWidget{
             SizedBox(height: 10,),
             FadeAnimation(1.6 , Text("Service will identify any music playing around you", textAlign: TextAlign.center, style: TextStyle(color: Colors.grey, fontSize: 16,),),),
             SizedBox(height: 30,),
-            FadeAnimation(1.8, Image.asset('assets/images/phone_3.png'),),
+            FadeAnimation(1.8, Image.asset('assets/images/phone_3.png'),
+              ),
             FadeAnimation(2.0, Divider(color: Color(0xffFE2851), height: 2, thickness: 3,),),
             SizedBox(height: 100,),
             new GestureDetector(
-              onTap: (){},
+              onTap: (){Navigator.push(context,
+              MaterialPageRoute(
+                builder: (context) => LoginPage(),
+                ));},
               child: FadeAnimation(2.2 , Container(
                   height: 50,
                   decoration: BoxDecoration(
